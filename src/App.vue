@@ -11,7 +11,7 @@
         <v-list-tile
           value="true"
           v-for="(item, i) in items"
-          :key="i"
+          :to="item.path"
           exact
         >
           <v-list-tile-action>
@@ -83,13 +83,16 @@
         drawer: true,
         items: [{
           icon: 'visibility',
-          title: 'Nearby'
+          title: 'Nearby',
+          path: '/'
         }, {
           icon: 'accessibility_new',
-          title: 'Peers'
+          title: 'Peers',
+          path: '/peers'
         }, {
           icon: 'stars',
-          title: 'Police Report'
+          title: 'Police Report',
+          path: '/report'
         }, {
           icon: 'flag',
           title: 'Report Case'
