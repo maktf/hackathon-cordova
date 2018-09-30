@@ -95,10 +95,12 @@
           path: '/report'
         }, {
           icon: 'flag',
-          title: 'Report Case'
+          title: 'Report Case',
+          path: '/userreport'
         }, {
           icon: 'question_answer',
-          title: 'User Messaging'
+          title: 'User Messaging',
+          path: '/messaging'
         }],
         miniVariant: false,
         title: 'Red Alert: ',
