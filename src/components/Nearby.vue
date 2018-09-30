@@ -1,19 +1,4 @@
 <template>
-  <!--<GmapMap-->
-    <!--:center=center-->
-    <!--:zoom="14"-->
-    <!--map-type-id="terrain"-->
-    <!--style="width: 500px; height: 300px"-->
-  <!--&gt;-->
-    <!--<GmapMarker-->
-      <!--:key="index"-->
-      <!--v-for="(m, index) in markers"-->
-      <!--:position="m.position"-->
-      <!--:clickable="true"-->
-      <!--:draggable="true"-->
-      <!--@click="center=m.position"-->
-    <!--/>-->
-  <!--</GmapMap>-->
   <vue-google-heatmap :points="points"
                       :lat="37.774929"
                       :lng="-122.419418"/>
