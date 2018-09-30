@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "red_alert",
+  "short_name": "red_alert",
+  "version": "io.test.vuetify",
+  "description": "A Vuetify project running in Cordova",
+  "author": "Apache Cordova Team",
+  "icons": [],
+  "start_url": "index.html"
+}

@@ -1,4 +1,4 @@
-#Sun Sep 30 03:54:10 PDT 2018
+#Sun Sep 30 08:52:26 PDT 2018
 base.0=/Users/herbertxu/Documents/hack/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
