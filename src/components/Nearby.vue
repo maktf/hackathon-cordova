@@ -15,8 +15,6 @@
     <!--/>-->
   <!--</GmapMap>-->
   <vue-google-heatmap :points="points"
-                      :width="mapWidth"
-                      :height="mapHeight"
                       :lat="37.774929"
                       :lng="-122.419418"/>
   <v-container fluid>
@@ -58,9 +56,7 @@
           {lat: 37.801024, lng: -122.434889},
           {lat: 37.800955, lng: -122.435392},
           {lat: 37.800886, lng: -122.435959}
-        ],
-        mapWidth: window.screen.width * window.devicePixelRatio,
-        mapHeight: window.screen.height * window.devicePixelRatio * 0.5
+        ]
       }
     }
   }
