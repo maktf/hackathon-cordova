@@ -18,26 +18,17 @@
     >
 
       <v-card>
-        <v-card-title
-          class="display-3"
-          primary-title
-          class="green lighten-4 font-weight-bold"
-        >
-          {{ status }}
-        </v-card-title>
-        <v-card-text class="green lighten-4">
-          <ul>
-            <li class="font-weight-medium" v-for="reason in statusReason">{{reason}}</li>
-          </ul>
+        <v-card-text class="red">
+          <span class="white--text headline">Help notification has been sent to nearby users!</span>
         </v-card-text>
-        <v-card-actions class="green lighten-4">
+        <v-card-actions class="red">
           <v-spacer></v-spacer>
           <v-btn
-            color="primary"
+            color="white"
             flat
             @click="dialog = false"
           >
-            I accept
+            Got it!
           </v-btn>
         </v-card-actions>
       </v-card>
