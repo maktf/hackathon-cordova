@@ -23,13 +23,52 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar fixed app :clipped-left="clipped">
+    <v-toolbar fixed app :clipped-left="clipped" class="green lighten-4">
       <v-toolbar-side-icon @click.stop="drawer = !drawer" light></v-toolbar-side-icon>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title v-text="title + status"></v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        icon
+        light
+        @click="dialog = true"
+      >
+        <v-icon class="black--text">visibility</v-icon>
+      </v-btn>
     </v-toolbar>
     <v-content>
       <router-view></router-view>
     </v-content>
+
+    <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+
+      <v-card>
+        <v-card-title
+          class="display-3"
+          primary-title
+          class="green lighten-4 font-weight-bold"
+        >
+          {{ status }}
+        </v-card-title>
+        <v-card-text class="green lighten-4">
+          <ul>
+            <li class="font-weight-medium" v-for="reason in statusReason">{{reason}}</li>
+          </ul>
+        </v-card-text>
+        <v-card-actions class="green lighten-4">
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            flat
+            @click="dialog = false"
+          >
+            I accept
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 
@@ -38,6 +77,7 @@
   export default {
     data () {
       return {
+        dialog: false,
         cordova: Vue.cordova,
         clipped: false,
         drawer: true,
@@ -58,7 +98,9 @@
           title: 'User Messaging'
         }],
         miniVariant: false,
-        title: 'Red Alert'
+        title: 'Red Alert: ',
+        status: 'MODERATE SAFE',
+        statusReason: ['Your area do not have any reported cases', 'Probability: 0.2']
       }
     },
     created () {
