@@ -1,9 +1,9 @@
 <template>
   <GmapMap
   :center=center
-  :zoom="14"
+  :zoom="13"
   map-type-id="terrain"
-  style="width: 500px; height: 300px"
+  style="width:100%; height:100%"
   >
   <GmapMarker
   :key="index"
@@ -14,6 +14,9 @@
   @click="center=m.position"
   />
   </GmapMap>
+  <!--<vue-google-heatmap :points="points"-->
+                      <!--:lat="37.774929"-->
+                      <!--:lng="-122.419418"/>-->
   <v-container fluid>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
@@ -34,7 +37,14 @@
 
 <script>
   export default {
-    name: 'Peers'
+    data () {
+      return {
+        center: { lat: 37.774929, lng: -122.419418 },
+        markers: [],
+        places: [],
+        currentPlace: null
+      }
+    }
   }
 </script>
 
