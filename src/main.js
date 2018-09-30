@@ -8,6 +8,7 @@ import VueHead from 'vue-head'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueGoogleHeatmap from 'vue-google-heatmap'
 // import VueTouch from 'vue-touch'
+// Just some test comment
 
 import App from './App'
 import router from './router'
