@@ -11,7 +11,7 @@
     >
       <v-icon>add_alert</v-icon>
     </v-btn>
-    <map-component></map-component>
+    <map-component :markers="markers"></map-component>
     <v-dialog
       v-model="dialog"
       width="500"
@@ -47,7 +47,11 @@
     data () {
       return {
         center: { lat: 37.774929, lng: -122.419418 },
-        markers: [],
+        markers: [{
+          position: { lat: 37.600646, lng: -122.369547 }
+        }, {
+          position: { lat: 37.599829, lng: -122.369110 }
+        }],
         places: [],
         currentPlace: null,
         dialog: false

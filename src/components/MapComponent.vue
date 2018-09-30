@@ -1,7 +1,7 @@
 <template>
   <GmapMap
     :center=center
-    :zoom="13"
+    :zoom="16"
     map-type-id="terrain"
     style="width:100%; height:100%"
   >
@@ -19,10 +19,10 @@
 <script>
   export default {
     name: 'MapComponent',
+    props: ['markers'],
     data () {
       return {
-        center: {lat: 37.774929, lng: -122.419418},
-        markers: [],
+        center: {lat: 37.599749, lng: -122.370005},
         places: [],
         currentPlace: null
       }
