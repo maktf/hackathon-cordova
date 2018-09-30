@@ -27,6 +27,7 @@
     "vue-cordova": "^0.1.2",
     "vue-head": "^2.0.12",
     "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.10.2",
     "vuetify": "^1.0.18"
   },
   "devDependencies": {

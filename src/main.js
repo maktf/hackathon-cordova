@@ -5,14 +5,23 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 import VueCordova from 'vue-cordova'
 import VueHead from 'vue-head'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 import App from './App'
 import router from './router'
+// import * as VueGoogleMaps from 'vue2-google-maps'
 
 Vue.use(Vuetify)
 Vue.config.productionTip = false
 Vue.use(VueCordova)
 Vue.use(VueHead)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyCKeydCdFuc9y3NNZrt3FaYrvyAQcIChdc',
+    libraries: 'places' // This is required if you use the Autocomplete plugin
+  }
+
+})
 
 // add cordova.js only if serving the app through file://
 if (window.location.protocol === 'file:' || window.location.port === '3000') {
